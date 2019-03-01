@@ -1,8 +1,8 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+* David Lutelmowski
+* 3/01/19
+* Eratosthenes
+*/
 package eratosthenes;
 
 /**
@@ -13,14 +13,14 @@ public class Eratosthenes {
 
     public static void main(String[] args) {
 
-        int n = 1000;
-        boolean[] numbers = new boolean[1001];
+        int n = 999;
+        boolean[] numbers = new boolean[1000];
 
         for (int i = 0; i < n; i++) {
             numbers[i] = true;
 
         }
-        for (int p = 2; p * p <= 1000; p++) {
+        for (int p = 2; p * p <= 999; p++) {
             if (numbers[p] == true) {
                 for (int i = p * p; i <= n; i += p) {
                     numbers[i] = false;
